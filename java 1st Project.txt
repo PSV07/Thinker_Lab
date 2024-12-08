@@ -1,0 +1,741 @@
+//Paste this code in eclipse for complete result.
+
+package java1stproject;
+
+import java.util.ArrayList;
+import java.util.Scanner;
+
+public class StrBill 
+{
+	Scanner sc=new Scanner(System.in);
+   
+    static String s="";
+    int choice;
+	static int billAmnt;
+    int unit;
+    int itmChoice;
+    ArrayList<Object> ar=new ArrayList<Object>();
+ 
+void productChoice()
+   {
+	   
+	   System.out.println("Please enter you name:");
+	   
+	   s=sc.nextLine();
+	   
+	   for(;;)
+	   {
+		   System.out.println("____________Welcome to Madhav Sweets_____________");
+		   System.out.println();
+		   System.out.println("*********Fantastic 4 offer applied*********");
+		   System.out.println();
+		   System.out.println("    Menu    ");
+		   System.out.println("===========================");
+		   System.out.println();
+		   System.out.println("1)Ice-Cream");
+		   System.out.println("2)Sweets");
+		   System.out.println("3)Cakes");
+		   System.out.println("4)Chocolates");
+		   System.out.println();
+		   System.out.println("Please enter what you want:");
+		   System.out.println();
+		   System.out.println("For example: If you want Ice-cream, Press 1");
+		   choice=sc.nextInt();
+		   
+		   switch(choice)
+		   {
+		      case 1:
+		      {
+		    	this.iceCream(); 
+		    	return;
+		      }
+		   
+		      case 2:
+	          {
+	    	      this.sweets();
+	    	      return;
+  	          }	   
+	    
+	          case 3:
+              {
+        	     this.cakes();
+        	     return;
+ 	   	      }
+ 
+              case 4:
+              {
+  	  		     this.chochlate();
+  	  		     return;
+              }
+              default :
+              {
+            	  break;
+              }
+		   
+		   }
+		}
+}
+		   
+		   
+   void iceCream() {
+	  System.out.println("Ooooo!Ice-Cream, Great choice.");
+ 	  System.out.println();
+ 	  System.out.println("We have 4 flavors.");
+ 	  System.out.println("====================");
+ 	  System.out.println();
+	  System.out.println("1)Mango-Chocolate  :120 Rs/100gm pack");
+ 	  System.out.println("2)Pineapple-Cream  :160 Rs/100gm pack");
+ 	  System.out.println("3)Vanila           :190 Rs/100gm pack");
+ 	  System.out.println("4)Rajasthani-Malai :180 Rs/100gm pack");
+ 	  System.out.println();
+ 	  System.out.println(s+",which flavor you want: ");
+ 	  int icmFlr=sc.nextInt();
+ 	  switch(icmFlr)
+ 	  {
+ 	    case 1: 
+ 	    {
+ 	    	System.out.println("Good Choice");
+ 	    	System.out.println(s+" how many units:");
+ 	    	unit=sc.nextInt();
+ 	    	billAmnt=unit*120;
+ 	    	ar.add("Mango-Chocolate              "+unit);
+ 	    	ar.add("120 rs                    "+unit*120+" rs");
+ 	    	ar.add("");
+ 	    	System.out.println();
+ 	    	System.out.println("For continue shopping, Press 1.");
+ 	    	System.out.println("For final bill, Press 2");
+ 	    	int caseChoice=sc.nextInt();
+	    	if(caseChoice!=1 && caseChoice!=2) {
+	    		System.out.println("Please choice one.");
+	    		caseChoice=sc.nextInt();
+	    	}
+	    	switch(caseChoice)
+ 	    	{
+ 	    	   case 1:
+ 	    	   {
+ 	    		  this.productChoice();
+ 	    		 return;
+ 	    	   }
+ 	    	   case 2:
+ 	    	   {
+ 	    		 this.bill();  
+ 	    		 return;
+ 	    	   }
+ 	    	   
+ 	    	}
+ 	    	break;
+ 	    }
+ 	    case 2: 
+ 	    {
+ 	    	System.out.println("Good Choice");
+ 	    	System.out.println(s+" how many units:");
+ 	    	unit=sc.nextInt();
+ 	    	billAmnt=unit*160;
+ 	    	ar.add("Pineapple-Cream              "+unit);
+ 	    	ar.add("160 rs                    "+unit*160+" rs");
+ 	    	ar.add("");
+ 	    	System.out.println();
+ 	    	System.out.println("For continue shopping, Press 1.");
+ 	    	System.out.println("For final bill, Press 2");
+ 	    	int caseChoice=sc.nextInt();
+	    	if(caseChoice!=1 && caseChoice!=2) {
+	    		System.out.println("Please choice one.");
+	    		caseChoice=sc.nextInt();
+	    	}
+	    	switch(caseChoice)
+ 	    	{
+ 	    	   case 1:
+ 	    	   {
+ 	    		   this.productChoice();
+ 	    		  return;
+ 	    	   }
+ 	    	   case 2:
+ 	    	   {
+ 	    		 this.bill();  
+ 	    		 return;
+ 	    	   }
+ 	    	   
+ 	    	}
+ 	    	break;
+ 	    }
+ 	    case 3: 
+ 	    {
+ 	    	System.out.println("Good Choice");
+ 	    	System.out.println(s+" how many units:");
+ 	    	unit=sc.nextInt();
+ 	    	billAmnt=unit*190;
+ 	    	ar.add("Vanila                          "+unit);
+ 	    	ar.add("190 rs                    "+unit*190+" rs");
+ 	    	ar.add("");
+ 	    	System.out.println();
+ 	    	System.out.println("For continue shopping, Press 1.");
+ 	    	System.out.println("For final bill, Press 2");
+ 	    	int caseChoice=sc.nextInt();
+	    	if(caseChoice!=1 && caseChoice!=2) {
+	    		System.out.println("Please choice one.");
+	    		caseChoice=sc.nextInt();
+	    	}
+	    	switch(caseChoice)
+ 	    	{
+ 	    	   case 1:
+ 	    	   {
+ 	    		  this.productChoice();
+ 	    		  return;
+ 	    	   }
+ 	    	   case 2:
+ 	    	   {
+ 	    		 this.bill();  
+ 	    		 return;
+ 	    	   }
+ 	    	   
+ 	    	}
+ 	    	break;
+ 	    }
+ 	    case 4: 
+ 	    {
+ 	    	System.out.println("Good Choice");
+ 	    	System.out.println(s+" how many units:");
+ 	    	unit=sc.nextInt();
+ 	    	billAmnt=unit*180;
+ 	    	ar.add("Rajasthani-Malai             "+unit);
+ 	    	ar.add("180 rs                    "+unit*180+" rs");
+ 	    	ar.add("");
+ 	    	System.out.println();
+ 	    	System.out.println("For continue shopping, Press 1.");
+ 	    	System.out.println("For final bill, Press 2");
+ 	    	int caseChoice=sc.nextInt();
+	    	if(caseChoice!=1 && caseChoice!=2) {
+	    		System.out.println("Please choice one.");
+	    		caseChoice=sc.nextInt();
+	    	}
+	    	switch(caseChoice)
+ 	    	{
+ 	    	   case 1:
+ 	    	   {
+ 	    		  this.productChoice();
+ 	    		 return;
+ 	    	   }
+ 	    	   case 2:
+ 	    	   {
+ 	    		 this.bill();  
+ 	    		 return;
+ 	    	   }
+ 	    	   
+ 	    	}
+ 	    	break;
+ 	    }
+ 	    default:
+ 	    {
+ 	    	System.out.println("Please enter a valid product code.");
+ 	    	this.iceCream();
+ 	    }
+ 	  }
+		     
+}
+   void sweets() {
+	  System.out.println("Ooooo!Sweets, Great choice.");
+ 	  System.out.println();
+	  System.out.println("We have 4 flavors.");
+ 	  System.out.println("====================");
+ 	  System.out.println();
+	  System.out.println("1)Kaju-Katri  :150 Rs/100gm pack");
+ 	  System.out.println("2)MilkCake    :170 Rs/100gm pack");
+ 	  System.out.println("3)Rasmali     :90  Rs/ piece");
+ 	  System.out.println("4)Seasonal-S  :120 Rs/100gm pack");
+ 	  System.out.println();
+ 	  System.out.println(s+",which Sweet you want: ");
+ 	  int icmFlr=sc.nextInt();
+ 	  switch(icmFlr)
+ 	  {
+ 	    case 1: 
+ 	    {
+ 	    	System.out.println("Good Choice");
+ 	    	System.out.println(s+" how many units:");
+ 	    	unit=sc.nextInt();
+ 	    	billAmnt=unit*150;
+ 	    	ar.add("Kaju-Katri                   "+unit);
+ 	    	ar.add("150 rs                    "+unit*150+" rs");
+ 	    	ar.add("");
+ 	    	System.out.println();
+ 	    	System.out.println("For continue shopping, Press 1.");
+ 	    	System.out.println("For final bill, Press 2");
+ 	    	int caseChoice=sc.nextInt();
+	    	if(caseChoice!=1 && caseChoice!=2) {
+	    		System.out.println("Please choice one.");
+	    		caseChoice=sc.nextInt();
+	    	}
+	    	switch(caseChoice)
+ 	    	{
+ 	    	   case 1:
+ 	    	   {
+ 	    		  this.productChoice();
+ 	    		 return;
+ 	    	   }
+ 	    	   case 2:
+ 	    	   {
+ 	    		 this.bill();  
+ 	    		 return;
+ 	    	   }
+ 	    	   
+ 	    	}
+ 	    	break;
+ 	    }
+ 	    case 2: 
+ 	    {
+ 	    	System.out.println("Good Choice");
+ 	    	System.out.println(s+" how many units:");
+ 	    	unit=sc.nextInt();
+ 	    	billAmnt=unit*170;
+ 	    	ar.add("MilkCake                    "+unit);
+ 	    	ar.add("170 rs                    "+unit*170+" rs");
+ 	    	ar.add("");
+ 	    	System.out.println();
+ 	    	System.out.println("For continue shopping, Press 1.");
+ 	    	System.out.println("For final bill, Press 2");
+ 	    	int caseChoice=sc.nextInt();
+	    	if(caseChoice!=1 && caseChoice!=2) {
+	    		System.out.println("Please choice one.");
+	    		caseChoice=sc.nextInt();
+	    	}
+	    	switch(caseChoice)
+ 	    	{
+ 	    	   case 1:
+ 	    	   {
+ 	    		  this.productChoice();
+ 	    		 return;
+ 	    	   }
+ 	    	   case 2:
+ 	    	   {
+ 	    		 this.bill();  
+ 	    		 return;
+ 	    	   }
+ 	    	   
+ 	    	}
+ 	    	break;
+ 	    }
+ 	    case 3: 
+ 	    {
+ 	    	System.out.println("Good Choice");
+ 	    	System.out.println(s+" how many units:");
+ 	    	unit=sc.nextInt();
+ 	    	billAmnt=unit*90;
+ 	    	ar.add("Rasmali                     "+unit);
+ 	    	ar.add("90 rs                    "+unit*90+" rs");
+ 	    	ar.add("");
+ 	    	System.out.println();
+ 	    	System.out.println("For continue shopping, Press 1.");
+ 	    	System.out.println("For final bill, Press 2");
+ 	    	int caseChoice=sc.nextInt();
+	    	if(caseChoice!=1 && caseChoice!=2) {
+	    		System.out.println("Please choice one.");
+	    		caseChoice=sc.nextInt();
+	    	}
+	    	switch(caseChoice)
+ 	    	{
+ 	    	   case 1:
+ 	    	   {
+ 	    		  this.productChoice();
+ 	    		 return;
+ 	    	   }
+ 	    	   case 2:
+ 	    	   {
+ 	    		 this.bill();  
+ 	    		 return;
+ 	    	   }
+ 	    	   
+ 	    	}
+ 	    	break;
+ 	    }
+ 	    case 4: 
+ 	    {
+ 	    	System.out.println("Good Choice");
+ 	    	System.out.println(s+" how many units:");
+ 	    	unit=sc.nextInt();
+ 	    	billAmnt=unit*120;
+ 	    	ar.add("Mango-Chocolate              "+unit);
+ 	    	ar.add("120 rs                    "+unit*120+" rs");
+ 	    	ar.add("");
+ 	    	System.out.println();
+ 	    	System.out.println("For continue shopping, Press 1.");
+ 	    	System.out.println("For final bill, Press 2");
+ 	    	int caseChoice=sc.nextInt();
+	    	if(caseChoice!=1 && caseChoice!=2) {
+	    		System.out.println("Please choice one.");
+	    		caseChoice=sc.nextInt();
+	    	}
+	    	switch(caseChoice)
+ 	    	{
+ 	    	   case 1:
+ 	    	   {
+ 	    		  this.productChoice();
+ 	    		 return;
+ 	    	   }
+ 	    	   case 2:
+ 	    	   {
+ 	    		 this.bill();  
+ 	    		 return;
+ 	    	   }
+ 	    	   
+ 	    	}
+ 	    	break;
+ 	    }
+ 	    default:
+ 	    {
+ 	    	System.out.println("Please enter a valid product code.");
+ 	    	this.sweets();
+ 	    	
+ 	    }
+ 	  }
+		     
+   }
+   
+    void cakes() {
+      System.out.println("Ooooo!Cakes, Great choice.");
+   	  System.out.println();
+  	  System.out.println("We have 4 flavors.");
+  	  System.out.println("====================");
+  	  System.out.println();
+   	  System.out.println("1)Mango-pine       :250 Rs/piece");
+   	  System.out.println("2)Pineapple-vanila :270 Rs/piece");
+   	  System.out.println("3)Malai-mix        :300 Rs/piece");
+   	  System.out.println("4)Chocolate        :200 Rs/piece");
+   	  System.out.println();
+   	  System.out.println(s+",which Cake you want: ");
+   	  int icmFlr=sc.nextInt();
+   	  switch(icmFlr)
+   	  {
+   	    case 1: 
+   	    {
+   	    	System.out.println("Good Choice");
+   	    	System.out.println(s+" how many cake:");
+   	    	unit=sc.nextInt();
+   	    	billAmnt=unit*250;
+   	    	ar.add("Mango-Chocolate              "+unit);
+  	    	ar.add("250 rs                    "+unit*250+" rs");
+  	    	ar.add("");
+  	    	System.out.println();
+  	    	System.out.println("For continue shopping, Press 1.");
+  	    	System.out.println("For final bill, Press 2");
+  	    	int caseChoice=sc.nextInt();
+	    	if(caseChoice!=1 && caseChoice!=2) {
+	    		System.out.println("Please choice one.");
+	    		caseChoice=sc.nextInt();
+	    	}
+	    	switch(caseChoice)
+   	    	{
+   	    	   case 1:
+   	    	   {
+   	    		 this.productChoice();
+   	    		return;
+   	    	   }
+   	    	   case 2:
+   	    	   {
+   	    		 this.bill();  
+   	    		return;
+   	    	   }
+   	    	   
+   	    	}
+   	    	break;
+   	    }
+   	    case 2: 
+   	    {
+   	    	System.out.println("Good Choice");
+   	    	System.out.println(s+" how many cake:");
+   	    	unit=sc.nextInt();
+   	    	billAmnt=unit*270;
+   	    	ar.add("Mango-Chocolate              "+unit);
+  	    	ar.add("270 rs                    "+unit*270+" rs");
+  	    	ar.add("");
+  	    	System.out.println();
+  	    	System.out.println("For continue shopping, Press 1.");
+  	    	System.out.println("For final bill, Press 2");
+  	    	int caseChoice=sc.nextInt();
+	    	if(caseChoice!=1 && caseChoice!=2) {
+	    		System.out.println("Please choice one.");
+	    		caseChoice=sc.nextInt();
+	    	}
+	    	switch(caseChoice)
+   	    	{
+   	    	   case 1:
+   	    	   {
+   	    		 this.productChoice();
+   	    		return;
+   	   	       }
+   	    	   case 2:
+   	    	   {
+   	    		 this.bill();  
+   	    		return;
+   	    	   }
+   	    	   
+   	    	}
+   	    	break;
+   	    }
+   	    case 3: 
+   	    {
+   	    	System.out.println("Good Choice");
+   	    	System.out.println(s+" how many cake:");
+   	    	unit=sc.nextInt();
+   	    	billAmnt=unit*300;
+   	    	ar.add("Mango-Chocolate              "+unit);
+  	    	ar.add("300 rs                    "+unit*300+" rs");
+  	    	ar.add("");
+  	    	System.out.println();
+  	    	System.out.println("For continue shopping, Press 1.");
+  	    	System.out.println("For final bill, Press 2");
+  	    	int caseChoice=sc.nextInt();
+	    	if(caseChoice!=1 && caseChoice!=2) {
+	    		System.out.println("Please choice one.");
+	    		caseChoice=sc.nextInt();
+	    	}
+	    	switch(caseChoice)
+   	    	{
+   	    	   case 1:
+   	    	   {
+   	    		 this.productChoice();
+   	    		 return;
+   	   	       }
+   	    	   case 2:
+   	    	   {
+   	    		 this.bill();  
+   	    		return;
+   	    	   }
+   	    	   
+   	    	}
+   	    	break;
+   	    }
+   	    case 4: 
+   	    {
+   	    	System.out.println("Good Choice");
+   	    	System.out.println(s+" how many cake:");
+   	    	unit=sc.nextInt();
+   	    	billAmnt=unit*200;
+   	    	ar.add("Mango-Chocolate              "+unit);
+  	    	ar.add("200 rs                    "+unit*200+" rs");
+  	    	ar.add("");
+  	    	System.out.println();
+  	    	System.out.println("For continue shopping, Press 1.");
+  	    	System.out.println("For final bill, Press 2");
+  	    	int caseChoice=sc.nextInt();
+	    	if(caseChoice!=1 && caseChoice!=2) {
+	    		System.out.println("Please choice one.");
+	    		caseChoice=sc.nextInt();
+	    	}
+	    	switch(caseChoice)
+   	    	{
+   	    	   case 1:
+   	    	   {
+   	    		 this.productChoice();
+   	    		return;
+   	   	    	}
+   	    	   case 2:
+   	    	   {
+   	    		 this.bill();  
+   	    		 break;
+   	    	   }
+   	    	   
+   	    	}
+   	    	break;
+   	    }
+   	    default:
+   	    {
+   	    	System.out.println("Please enter a valid product code.");
+   	    	this.cakes();
+   	    }
+   	    break;
+   	  }
+   	  
+
+     }
+   
+  void chochlate() {
+	  System.out.println("Ooooo!Chocolates, Great choice.");
+	  System.out.println("We have 4 flavors.");
+	  System.out.println("====================");
+	  System.out.println("1)Daily-milk  :70 Rs/pack");
+	  System.out.println("2)5-star      :40 Rs/pack");
+	  System.out.println("3)Kit-Kat     :100 Rs/pack");
+	  System.out.println("4)Milky-Bar   :50 Rs/pack");
+	  System.out.println();
+	  System.out.println(s+",which Chocolate you want: ");
+	  int icmFlr=sc.nextInt();
+	  switch(icmFlr)
+	  {
+	    case 1: 
+	    {
+	    	System.out.println("Good Choice");
+	    	System.out.println(s+" how many units:");
+	    	unit=sc.nextInt();
+	    	billAmnt=unit*70;
+	    	ar.add("Daily-milk                 "+unit);
+	    	ar.add("70 rs                    "+unit*70+" rs");
+	    	ar.add("");
+	    	System.out.println();
+	    	System.out.println("For continue shopping, Press 1.");
+	    	System.out.println("For final bill, Press 2");
+	    	int caseChoice=sc.nextInt();
+	    	if(caseChoice!=1 && caseChoice!=2) {
+	    		System.out.println("Please choice one.");
+	    		caseChoice=sc.nextInt();
+	    	}
+	    	switch(caseChoice)
+	    	{
+	    	   case 1:
+	    	   {
+	    		   this.productChoice();
+	    			return;
+	    	  	}
+	    	   case 2:
+	    	   {
+	    		 this.bill();  
+	    		 return;
+	    	   }
+	    	   
+	    	}
+	    	break;
+	    }
+	    case 2: 
+	    {
+	    	System.out.println("Good Choice");
+	    	System.out.println(s+" how many units:");
+	    	unit=sc.nextInt();
+	    	billAmnt=unit*50;
+	    	ar.add("5-star                     "+unit);
+	    	ar.add("50 rs                    "+unit*50+" rs");
+	    	ar.add("");
+	    	System.out.println();
+	    	System.out.println("For continue shopping, Press 1.");
+	    	System.out.println("For final bill, Press 2");
+	    	int caseChoice=sc.nextInt();
+	    	if(caseChoice!=1 && caseChoice!=2) {
+	    		System.out.println("Please choice one.");
+	    		caseChoice=sc.nextInt();
+	    	}
+	    	switch(caseChoice)
+	    	{
+	    	   case 1:
+	    	   {
+	    		   this.productChoice();
+	    			return;
+	          	}
+	    	   case 2:
+	    	   {
+	    		 this.bill();  
+	    		 return;
+	    	   }
+	    	   
+	    	}
+	    	break;
+	    }
+	    case 3: 
+	    {
+	    	System.out.println("Good Choice");
+	    	System.out.println(s+", how many units:");
+	    	unit=sc.nextInt();
+	    	billAmnt=unit*100;
+	    	ar.add("Kit-Kat                     "+unit);
+	    	ar.add("100 rs                    "+unit*100+" rs");
+	    	ar.add("");
+	    	System.out.println();
+	    	System.out.println("For continue shopping, Press 1.");
+	    	System.out.println("For final bill, Press 2");
+	    	int caseChoice=sc.nextInt();
+	    	if(caseChoice!=1 && caseChoice!=2) {
+	    		System.out.println("Please choice one.");
+	    		caseChoice=sc.nextInt();
+	    	}
+	    	switch(caseChoice)
+	    	{
+	    	   case 1:
+	    	   {
+	    		   this.productChoice();
+	    			return;
+	       	  	}
+	    	   case 2:
+	    	   {
+	    		 this.bill();  
+	    		 return;
+	    	   }
+	    	   
+	    	}
+	    	break;
+	    }
+	    case 4: 
+	    {
+	    	System.out.println("Good Choice");
+	    	System.out.println(s+" how many units:");
+	    	unit=sc.nextInt();
+	    	billAmnt=unit*50;
+	    	ar.add("Milky-Bar                    "+unit);
+	    	ar.add("50 rs                    "+unit*50+" rs");
+	    	ar.add("");
+	    	System.out.println();
+	    	System.out.println("For continue shopping, Press 1.");
+	    	System.out.println("For final bill, Press 2");
+	    	int caseChoice=sc.nextInt();
+	    	if(caseChoice!=1 && caseChoice!=2) {
+	    		System.out.println("Please choice one.");
+	    		caseChoice=sc.nextInt();
+	    	}
+	    	switch(caseChoice)
+	    	{
+	    	   case 1:
+	    	   {
+	    		   this.productChoice();
+	    			return;
+	       	   }
+	    	   case 2:
+	    	   {
+	    		 this.bill();  
+	    		 return;
+	    	   }
+	    	   
+	    	   
+	    	}
+	    	break;
+	    }
+	    default:
+	    {
+	    	System.out.println("Please enter a valid product code.");
+	    	this.chochlate();
+	    }
+	  }
+	    
+ 
+}
+
+
+   public void bill() {
+	   System.out.println("==================================");
+	   System.out.println(s+" your final bill is:");
+	   System.out.println("------------------------------");
+	   System.out.println();
+	   for(Object data:ar) {
+		   System.out.println(data);
+	   }
+	   System.out.println("------------------------------");
+	   
+	   if(billAmnt>=500)
+	   {
+		   int dcnt=(billAmnt/10);
+		   System.out.println("Discount applied :     "+dcnt);
+	       System.out.println("Pay                    "+(billAmnt-dcnt)+" Rs");
+	       System.out.println();
+	       System.out.println("You save "+dcnt+" in Shopping.");
+	   }
+	   else
+	   {
+		   System.out.println("Pay                    "+billAmnt+" Rs");
+	   }
+	   System.out.println();
+	   System.out.println("    Thank You for Shopping.   ");
+	   System.out.println();
+	   System.out.println("         VISIT AGAIN          ");
+	   System.out.println();
+	   System.out.println("=================================");
+	 return;
+   }
+   public static void main(String [] args)
+   {
+	   new StrBill().productChoice();
+   }
+}
