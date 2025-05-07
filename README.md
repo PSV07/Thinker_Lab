@@ -1,4 +1,4 @@
-# Madhav Sweets Store Billing Project
+# Sweets Store Billing Project
 
 ## Overview
 This project is a Java-based application designed to manage billing processes for **Madhav Sweets**. It provides functionalities such as product management, customer management, and transaction processing tailored for a sweets retail environment.
